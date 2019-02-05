@@ -1,0 +1,66 @@
+.container {
+  max-width: 1160px;
+  margin: auto;
+}
+
+.swatches {
+  display: flex;
+  flex-flow: wrap;
+  width: calc(100% + 10px);
+  margin: 0 0 0 -5px;
+}
+
+.swatches__block {
+  flex: 1 0 25%;
+  margin: 5px;
+  border: 1px solid #EFEFEF;
+}
+
+.swatches__color {
+  height: 250px;
+  background-color: #FFFFFF;
+}
+
+.swatched__colorname {
+  padding: 10px;
+}
+
+.nautical {
+  background-color: $nautical;
+}
+
+.deep-koamaru {
+  background-color: $deep-koamaru;
+}
+
+.black {
+  background-color: $black;
+}
+
+.hint-of-mauve-pansy {
+  background-color: $hint-of-mauve-pansy;
+}
+
+.ballyhoo {
+  background-color: $ballyhoo;
+}
+
+.button-blue {
+  background-color: $button-blue;
+}
+
+.orchid {
+  background-color: $orchid;
+}
+
+.kiri-mist {
+  background-color: $kiri-mist;
+}
+
+.obsidian-shard {
+  background-color: $obsidian-shard;
+}
+
+.white {
+  background-color: $white;
+}

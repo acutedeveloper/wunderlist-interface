@@ -1,0 +1,134 @@
+/*------------------------------------*\
+  Typography
+\*------------------------------------*/
+
+$font-base-size: 16;
+
+$font-primary: Helvetica, Arial, sans-serif;
+
+/*------------------------------------*
+	SVG ARTWORK FONT FACES
+*------------------------------------*/
+
+/* lato-300 - latin */
+@font-face {
+  font-family: 'lato-light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/lato/lato-v14-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Lato Light'), local('Lato-Light'),
+  url('../fonts/lato/lato-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/lato/lato-v14-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-300.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/lato/lato-v14-latin-300.svg#Lato') format('svg'); /* Legacy iOS */
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: 'lato-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato/lato-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Lato Regular'), local('Lato-Regular'),
+  url('../fonts/lato/lato-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/lato/lato-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/lato/lato-v14-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: 'lato-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato/lato-v14-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Lato Bold'), local('Lato-Bold'),
+  url('../fonts/lato/lato-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/lato/lato-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/lato/lato-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/lato/lato-v14-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+$font-bold: lato-bold, lato, Helvetica, Arial, sans-serif;
+$font-primary: lato-regular, lato, Helvetica, Arial, sans-serif;
+$font-light: lato-light, lato, Helvetica, Arial, sans-serif;
+
+/*------------------------------------*
+	SASS FONT SIZE VARIABLES
+*------------------------------------*/
+
+
+$text-x-large: px-to-rem(40, $font-base-size);
+$lineheight-x-large: 1.2;
+
+$text-large: px-to-rem(16, $font-base-size);
+$lineheight-large: 1.5;
+
+$text-medium: px-to-rem(14, $font-base-size);
+$lineheight-medium: 1.43; // + 4px Margin Bottom
+
+$text-small: px-to-rem(12, $font-base-size);
+$lineheight-small: 1.67; // + 6px Margin Bottom
+
+$text-x-small: px-to-rem(10, $font-base-size);
+$lineheight-x-small: 1.6;
+
+
+/*------------------------------------*\
+  Main Body
+\*------------------------------------*/
+
+body {
+  font-family: #{$font-primary};
+}
+
+/*------------------------------------*\
+  HEADINGS
+\*------------------------------------*/
+
+/*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+
+// Perhaps create a mixin for font sizes and padding and margins
+
+h1, h2, h3, h4, h5{
+  font-family: $font-bold;
+  font-style: normal;
+}
+
+h1, .text-size-x-large {
+  font-size: $text-x-large;
+  line-height: $lineheight-x-large;
+}
+
+h2, .text-size-large {
+  font-size: $text-large;
+  line-height: $lineheight-large;
+}
+
+h3, .text-size-medium {
+  font-sxize: $text-medium;
+  line-height: $lineheight-medium;
+  padding-bottom: 4px; // To keep type aligned ot the grid
+}
+
+h4, .text-size-small {
+  font-size: $text-small;
+  line-height: $lineheight-small;
+  padding-bottom: 6px; // To keep type aligned ot the grid
+}
+
+h5, .text-size-x-small {
+  font-size: $text-x-small;
+  line-height: $lineheight-x-small;
+}
+
+p, .size-p {
+  font-size: $text-medium;
+  font-weight: 400;
+  line-height: $lineheight-medium;
+}
+
+strong{
+  font-weight: 400;
+}
