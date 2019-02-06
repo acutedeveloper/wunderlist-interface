@@ -22,6 +22,10 @@ Hide black sidebar on mobile. Which is activated by reveal button in header. Rev
 On mobile search input is hidden but revealed with icon of magnifying glass. On desktop it is displayed in full view.
 
 ## Progress Log
+**Creating mobile & Desktop Layout grid in Sketch: 06/02/19 30m**
+
+---
+
 **Creating Styleguide: 05/02/19 1Hr 30m**
 
 Had to create the main styleguide html layout from scratch.
