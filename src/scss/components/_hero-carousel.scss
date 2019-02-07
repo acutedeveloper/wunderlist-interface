@@ -1,0 +1,16 @@
+.hero-carousel {
+  @apply flex flex-col items-start hint-of-mauve-pansy p-4;
+
+  &__content {
+    @apply w-full;
+    @screen md {
+      @apply w-2/3;
+    }
+  }
+
+  &__cta {
+    @apply ballyhoo text-white p-4;
+
+  }
+
+}

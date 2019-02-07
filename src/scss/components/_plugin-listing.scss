@@ -1,0 +1,21 @@
+.plugin-listing {
+  @apply ratio-block--1x1 texture--white-trans ratio-block;
+
+  &__content {
+    @apply flex justify-center flex-col items-center ratio-block__content;
+
+  }
+
+  &__title {
+    @apply text-white;
+    font-size: $text-medium;
+
+  }
+
+  &__stars {
+    @apply my-4;
+    font-size: $text-small;
+
+  }
+
+}

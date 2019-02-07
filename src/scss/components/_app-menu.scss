@@ -1,0 +1,14 @@
+.app-menu {
+  @apply list-reset flex flex-col;
+
+  &__item {
+    @apply py-4;
+
+  }
+
+  &__link {
+    @apply rounded-full bg-white;
+
+  }
+
+}

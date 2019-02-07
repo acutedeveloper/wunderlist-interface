@@ -2,143 +2,216 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content"width="device-width,initial-scale=1">
-        <title>Your Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wunderlist Interface</title>
         <link rel="stylesheet" href="../dist/css/stylesheet.css">
     </head>
     <body>
         <div class="line-height-grid"></div>
         <div data-pg-name="wrapper" class="flex max-w-2xl w-full m-auto">
-            <div class="ratio-block hidden md:block" data-pg-name="sidebar">
-                <img src="https://images.unsplash.com/photo-1467663802424-21ff675548c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=90&h=90&fit=crop" class="block"/>
-                <ul class="list-reset flex flex-col">
-                    <li>
-                        <a name="anchor" class="ratio-block rounded-full">ICON</a>
+            <div class="hidden md:block p-4 bg-black" data-pg-name="sidebar">
+                <img src="https://images.unsplash.com/photo-1467663802424-21ff675548c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=90&h=90&fit=crop" class="block" data-pg-name="sidebar__logo"/>
+                <ul class="list-reset flex flex-col" data-pg-name="app-menu">
+                    <li class="py-4" data-pg-name="app-menu__item">
+                        <a name="anchor" class="rounded-full bg-white" data-pg-name="app-menu__link"><i class="icon-facebook"></i></a>
                     </li>
-                    <li>
-                        <a name="anchor" class="ratio-block rounded-full">ICON</a>
+                    <li class="py-4" data-pg-name="app-menu__item">
+                        <a name="anchor" class="rounded-full bg-white" data-pg-name="app-menu__link"><i class="icon-git"></i></a>
                     </li>
-                    <li>
-                        <a name="anchor" class="ratio-block rounded-full">ICON</a>
+                    <li class="py-4" data-pg-name="app-menu__item">
+                        <a name="anchor" class="rounded-full bg-white" data-pg-name="app-menu__link"><i class="icon-pinterest"></i></a>
                     </li>
-                    <li>
-                        <a name="anchor" class="ratio-block rounded-full">ICON</a>
-                    </li>
-                    <li>
-                        <a name="anchor" class="ratio-block rounded-full">ICON</a>
+                    <li data-pg-name="app-menu__item" class="py-4">
+                        <a name="anchor" class="rounded-full bg-white" data-pg-name="app-menu__link"><i class="icon-dropbox"></i></a>
                     </li>
                 </ul>
             </div>
-            <div class="ratio-block flex-1" data-pg-name="main-content">
-                <div class="ratio-block flex justify-between" data-pg-name="header">
+            <div class="flex-1" data-pg-name="main-content">
+                <div class="flex justify-between" data-pg-name="header">
                     <div data-pg-name="header__column" class="flex">
-                        <a name="anchor" class="ratio-block md:hidden"></a>
-                        <form data-pg-name="header__search">
-                            <i>i</i>
-                            <input>
+                        <a name="anchor" class="md:hidden p-4" data-pg-name="header__sidebar-toggle"><i class="icon-share"></i></a>
+                        <form data-pg-name="search-form" class="p-4">
+                            <i data-pg-name="search-form__icon" class="icon-search"></i>
+                            <input data-pg-name="search-form__input" class="hidden md:inline-block">
                         </form>
                     </div>
                     <div data-pg-name="header__column" class="flex">
-                        <a name="anchor" class="ratio-block block"></a>
-                        <a name="anchor" class="ratio-block block"></a>
-                        <ul class="list-reset">
-                            <li>List item
-                                <a name="anchor"></a>
-                            </li>
-                        </ul>
+                        <nav class="flex" data-pg-name="user-nav">
+                            <a name="anchor" class="block p-4" data-pg-name="user-nav__icon-button"><i class="icon-mail"></i></a>
+                            <a name="anchor" class="block p-4" data-pg-name="user-nav__icon-button"><i class="icon-bell-alt"></i></a>
+                            <ul class="list-reset" data-pg-name="user-nav__menu">
+                                <li data-pg-name="user-nav__menu-item">
+                                    <a name="anchor" data-pg-name="user-nav__menu-link" class="p-4 block">Nigela P</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-                <div class="ratio-block flex flex-col items-start" data-pg-name="hero-carousel">
-                    <h1>Heading 1</h1>
-                    <p>Paragraph</p>
-                    <button class="ballyhoo text-white p-4">Upgrade to Wonderlist Pro</button>
-                    <a name="anchor">In a team? Go for Wonderlist Pro</a>
+                <div class="flex flex-col items-start hint-of-mauve-pansy p-4" data-pg-name="hero-carousel">
+                    <div data-pg-name="hero-carousel__content" class="md:w-2/3 w-full">
+                        <h1 data-pg-name="hero-carousel__title">Wunderlist Pro</h1>
+                        <p data-pg-name="hero-carousel__paragraph">Upgrade your Wunderlist experience and start accomplishing even more in the home and in the office.</p>
+                    </div>
+                    <button class="ballyhoo text-white p-4" data-pg-name="hero-carousel__cta">Upgrade to Wonderlist Pro</button>
+                    <a name="anchor" data-pg-name="hero-carousel__text-link">In a team? Go for Wonderlist Pro</a>
                 </div>
-                <div class="ratio-block" data-pg-name="plugins-store">
-                    <div class="ratio-block flex justify-between" data-pg-name="plugins-store__options-wrap">
-                        <div class="ratio-block">
+                <div data-pg-name="plugins-store" class="p-4 nautical">
+                    <div class="flex justify-between texture--white-trans mb-4" data-pg-name="plugins-store__options-wrap">
+                        <div class="m-4 p-4 texture--white-trans" data-pg-name="plugins-store__select-menu">
                             <select>
                                 <option>Collections</option>
                             </select>
                         </div>
-                        <a name="anchor" class="ratio-block md:hidden"></a>
-                        <ul class="list-reset hidden md:flex">
-                            <li class="px-4">
-                                <a name="anchor">All</a>
+                        <a name="anchor" class="md:hidden flex items-center text-white text-size-large p-4" data-pg-name="plugins-store__filter-menu-toggle"><i class="icon-sliders"></i></a>
+                        <ul class="list-reset hidden md:flex" data-pg-name="plugins-store__filter-menu">
+                            <li data-pg-name="plugins-store__filter-menu-item">
+                                <a name="anchor" data-pg-name="plugins-store__filter-menu-link" class="text-white block h-full flex items-center px-4 border-b-4">All</a>
                             </li>
-                            <li class="px-4">
-                                <a name="anchor">New</a>
+                            <li data-pg-name="plugins-store__filter-menu-item">
+                                <a name="anchor" data-pg-name="plugins-store__filter-menu-link" class="text-white block h-full flex items-center px-4 border-b-4">All</a>
                             </li>
-                            <li class="px-4">
-                                <a name="anchor">Featured</a>
+                            <li data-pg-name="plugins-store__filter-menu-item">
+                                <a name="anchor" data-pg-name="plugins-store__filter-menu-link" class="text-white block h-full flex items-center px-4 border-b-4">All</a>
                             </li>
-                            <li class="px-4">
-                                <a name="anchor">Popular</a>
+                            <li data-pg-name="plugins-store__filter-menu-item">
+                                <a name="anchor" data-pg-name="plugins-store__filter-menu-link" class="text-white block h-full flex items-center px-4 border-b-4">All</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="ratio-block flex flex-wrap" data-pg-name="plugins-store__grid">
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                    <div class="flex flex-wrap -m-2" data-pg-name="plugins-store__grid">
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ratio-block w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
-                            <div class="ratio-block ratio-block--1x1" data-pg-name="plugin-listing">
-                                <div class="ratio-block__content flex justify-center flex-col items-center" data-pg-name="plugin-listing__content">
-                                    <img src="http://pinegrow.com/placeholders/img20.jpg"/>
-                                    <h2><div class="ratio-block bg-red my-4"></div>Heading 2</h2>
+                        <div class="w-full md:w-1/2 lg:w-1/4 p-2" data-pg-name="plugins-store__grid-item">
+                            <div class="ratio-block--1x1 texture--white-trans ratio-block" data-pg-name="plugin-listing">
+                                <div class="flex justify-center flex-col items-center ratio-block__content" data-pg-name="plugin-listing__content">
+                                    <h2 data-pg-name="plugin-listing__title" class="text-size-medium text-white">Heading 2</h2>
+                                    <div class="my-4 text-size-small" data-pg-name="plugin-listing__stars">
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                        <i class="icon-star text-white"></i>
+                                    </div>
+                                    <div data-pg-name="plugin-listing__logo">
+                                        <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=75&h=50&fit=crop"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

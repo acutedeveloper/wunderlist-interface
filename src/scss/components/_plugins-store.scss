@@ -1,0 +1,49 @@
+.plugins-store {
+  @apply p-4 nautical;
+
+  &__options-wrap {
+    @apply flex justify-between texture--white-trans mb-4;
+
+  }
+
+  &__select-menu {
+    @apply m-4 p-4 texture--white-trans;
+
+  }
+
+  &__filter-menu-toggle {
+    @apply flex items-center text-white p-4;
+    font-size: $text-large;
+    @screen md {
+      @apply hidden;
+    }
+  }
+
+  &__filter-menu {
+    @apply list-reset hidden;
+    @screen md {
+      @apply flex;
+    }
+  }
+
+  &__filter-menu-link {
+    @apply text-white block h-full flex items-center px-4 border-b-4;
+
+  }
+
+  &__grid {
+    @apply flex flex-wrap -m-2;
+
+  }
+
+  &__grid-item {
+    @apply w-full p-2;
+    @screen md {
+      @apply w-1/2;
+    }
+    @screen lg {
+      @apply w-1/4;
+    }
+  }
+
+}

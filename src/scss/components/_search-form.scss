@@ -1,0 +1,15 @@
+.search-form {
+  @apply p-4;
+
+  &__icon {
+
+  }
+
+  &__input {
+    @apply hidden;
+    @screen md {
+      @apply inline-block;
+    }
+  }
+
+}

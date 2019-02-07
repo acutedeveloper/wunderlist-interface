@@ -1,0 +1,16 @@
+.header {
+  @apply flex justify-between;
+
+  &__column {
+    @apply flex;
+
+  }
+
+  &__sidebar-toggle {
+    @apply p-4;
+    @screen md {
+      @apply hidden;
+    }
+  }
+
+}

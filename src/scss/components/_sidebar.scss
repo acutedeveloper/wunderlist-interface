@@ -1,0 +1,11 @@
+.sidebar {
+  @apply hidden p-4 bg-black;
+  @screen md {
+    @apply block;
+  }
+  &__logo {
+    @apply block;
+
+  }
+
+}

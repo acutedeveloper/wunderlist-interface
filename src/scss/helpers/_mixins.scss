@@ -26,8 +26,8 @@ Screen width options to match the breakpoint function values
 /*
 Responsive Typography
 */
-@mixin get-font-size($font-map, $breakpoint:"sm"){
-  @if($breakpoint == "sm") {
+@mixin get-font-size($font-map, $breakpoint:"sm") {
+  @if ($breakpoint == "sm") {
     font-size: map-get($font-map, $breakpoint);
   } @else {
     @include media-breakpoint($breakpoint) {

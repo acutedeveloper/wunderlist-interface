@@ -23,6 +23,7 @@ $font-primary: Helvetica, Arial, sans-serif;
   url('../fonts/lato/lato-v14-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/lato/lato-v14-latin-300.svg#Lato') format('svg'); /* Legacy iOS */
 }
+
 /* lato-regular - latin */
 @font-face {
   font-family: 'lato-regular';
@@ -36,6 +37,7 @@ $font-primary: Helvetica, Arial, sans-serif;
   url('../fonts/lato/lato-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../fonts/lato/lato-v14-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
 }
+
 /* lato-700 - latin */
 @font-face {
   font-family: 'lato-bold';
@@ -91,7 +93,7 @@ body {
 
 // Perhaps create a mixin for font sizes and padding and margins
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
   font-family: $font-bold;
   font-style: normal;
 }
@@ -129,6 +131,6 @@ p, .size-p {
   line-height: $lineheight-medium;
 }
 
-strong{
+strong {
   font-weight: 400;
 }
