@@ -8,7 +8,7 @@ Start Date: 04/02/19
 - Drop-down select filter
 - In-line options menu filter
 - Main header search input
-- Notification icons w dropdowns
+- Notification icons w/dropdowns
 - Sidebar logo icons
 
 ## Responsive approach
@@ -22,6 +22,11 @@ Hide black sidebar on mobile. Which is activated by reveal button in header. Rev
 On mobile search input is hidden but revealed with icon of magnifying glass. On desktop it is displayed in full view.
 
 ## Progress Log
+
+**Creating Mobile & Desktop block layouts in PineGrow: 06/02/19 1hr**
+
+---
+
 **Creating mobile & Desktop Layout grid in Sketch: 06/02/19 30m**
 
 ---
@@ -35,8 +40,8 @@ Also needed to create the font size variables and classes, this needs to be opti
 Line height grid and the fonts line up nicely. Adding padding seems to work as a way to get fonts
 to sit nicely.
 ----
-Creating Colors: 04/02/19 30m
+**Creating Colors: 04/02/19 30m**
 
 ----
-Creating Typescale: 04/02/19 6:15 - 6:45 30m
+**Creating Typescale: 04/02/19 6:15 - 6:45 30m**
 
