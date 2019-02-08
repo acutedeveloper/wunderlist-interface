@@ -22,6 +22,13 @@ Hide black sidebar on mobile. Which is activated by reveal button in header. Rev
 On mobile search input is hidden but revealed with icon of magnifying glass. On desktop it is displayed in full view.
 
 ## Progress Log
+**Working on the final stylings: 08/02/19 45m**
+
+Was not feeling in the mood this morning, so struggled to push through a basic task. The tailwind 
+syntax sometimes makes things a little confusing. Need to work on the Tailwind to CSS syntax script.
+
+---
+
 **Labelling HTML elements | Adding basic component styling | Converting to SCSS: 07/02/19 1hr 20m**
 I think in this stage I was slowed down by the need to think of names for components!!
 
