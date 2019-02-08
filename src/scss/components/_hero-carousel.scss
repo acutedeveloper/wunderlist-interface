@@ -1,8 +1,12 @@
 .hero-carousel {
-  @apply flex flex-col items-start hint-of-mauve-pansy p-4;
+  @apply flex flex-col items-start hint-of-mauve-pansy;
+  justify-content: space-around;
+  padding: 0 3.125rem;
 
+  height: 280px;
   &__content {
     @apply w-full;
+
     @screen md {
       @apply w-2/3;
     }
@@ -11,6 +15,10 @@
   &__cta {
     @apply ballyhoo text-white p-4;
 
+  }
+
+  &__text-link {
+    display: block;
   }
 
 }

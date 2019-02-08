@@ -1,5 +1,6 @@
 .header {
   @apply flex justify-between;
+  margin: 0 3.125rem;
 
   &__column {
     @apply flex;

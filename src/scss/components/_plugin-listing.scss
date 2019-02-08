@@ -1,9 +1,22 @@
 .plugin-listing {
-  @apply ratio-block--1x1 texture--white-trans ratio-block;
+  @apply texture--white-trans;
+  padding: 10px;
+  position: relative;
+  flex: 1 0 auto;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 
   &__content {
-    @apply flex justify-center flex-col items-center ratio-block__content;
-
+    @apply flex justify-center flex-col items-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   &__title {

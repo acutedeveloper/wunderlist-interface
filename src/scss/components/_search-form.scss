@@ -1,14 +1,17 @@
 .search-form {
-  @apply p-4;
-
+  display: flex;
   &__icon {
-
+    @apply p-2;
+    display: block;
   }
 
   &__input {
     @apply hidden;
     @screen md {
       @apply inline-block;
+      border-left: 2px solid $kiri-mist;
+      margin: 0.5rem 0;
+      height: 2.5rem;
     }
   }
 

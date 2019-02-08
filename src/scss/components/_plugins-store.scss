@@ -1,5 +1,6 @@
 .plugins-store {
-  @apply p-4 nautical;
+  @apply nautical;
+  padding: 1rem 3.125rem;
 
   &__options-wrap {
     @apply flex justify-between texture--white-trans mb-4;
@@ -21,14 +22,22 @@
 
   &__filter-menu {
     @apply list-reset hidden;
+    margin-right: 1rem;
     @screen md {
       @apply flex;
     }
   }
 
   &__filter-menu-link {
-    @apply text-white block h-full flex items-center px-4 border-b-4;
+    @apply text-white block h-full flex items-center px-4;
+    border-bottom: 4px solid transparent;
+    text-transform: uppercase;
+    font-size: $text-small;
+    line-height: $lineheight-small;
 
+    &:hover, &--active {
+      border-color: $button-blue;
+    }
   }
 
   &__grid {

@@ -1,11 +1,14 @@
 .sidebar {
-  @apply hidden p-4 bg-black;
-  @screen md {
-    @apply block;
-  }
-  &__logo {
-    @apply block;
+  @apply hidden bg-black;
+  width: 5rem;
 
+  @screen md {
+    display: block;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 1rem;
   }
 
 }

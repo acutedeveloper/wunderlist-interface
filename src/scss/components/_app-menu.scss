@@ -1,14 +1,23 @@
 .app-menu {
+
+  $self: &;
+
   @apply list-reset flex flex-col;
 
   &__item {
-    @apply py-4;
 
+    & + & {
+      padding-top: 1rem;
+    }
   }
 
   &__link {
-    @apply rounded-full bg-white;
-
+    border-radius: 100%;
+    background-color: $white;
+    padding: 0.5rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+    display: block;
   }
 
 }
