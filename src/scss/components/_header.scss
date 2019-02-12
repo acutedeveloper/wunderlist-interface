@@ -1,10 +1,34 @@
 .header {
   @apply flex justify-between;
-  margin: 0 3.125rem;
+
+  @screen md {
+    margin: 0 3.125rem;
+  }
 
   &__column {
     @apply flex;
 
+  }
+
+  &__icon-button {
+    @apply p-2;
+    color: $kiri-mist;
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      color: $white;
+      background-color: $kiri-mist;
+    }
+
+    @screen sm {
+      @apply p-4;
+    }
+    
+    &--hide-desktop {
+      @screen md {
+        display: none;
+      }
+    }
   }
 
   &__sidebar-toggle {

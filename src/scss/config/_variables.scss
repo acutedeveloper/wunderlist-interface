@@ -4,14 +4,15 @@
 
 $nautical: #2F497B;
 $deep-koamaru: #343263;
-$black: #000000;
 $hint-of-mauve-pansy: #D8D8D8;
 $ballyhoo: #5AA842;
 $button-blue: #2897F5;
 $orchid: #7A80EA;
 $kiri-mist: #C5C7D2;
 $obsidian-shard: #040519;
-$white: #FFFFFF;
+$black: #000;
+$white: #FFF;
 
 $texture--white-trans: rgba(255, 255, 255, 0.08);
-
+$texture--white-trans-tint: rgba(255, 255, 255, 0.18);
+$texture--blue-gradient: linear-gradient(-180deg, #3A4A80 0%, #0C2048 99%);

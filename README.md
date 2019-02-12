@@ -22,10 +22,37 @@ Hide black sidebar on mobile. Which is activated by reveal button in header. Rev
 On mobile search input is hidden but revealed with icon of magnifying glass. On desktop it is displayed in full view.
 
 ## Progress Log
+
+**Working on tweaks: 12/02/19 2hr**
+
+Worked on adding the JS to hidden elements. Added the drop down menu and filter menu.
+
+- Get Logos for the layout [ ]
+
+---
+
+**Working on tweaks: 12/02/19 1hr**
+
+Working in the last tweaks that are needed to complete this project. The last things needed are:
+
+- Javascript Carousel [ ]
+- Javascript header search [ ]
+- Header button notification icons [ ]
+- Javascript for sidebar [x]
+- Heading user drop menu [x]
+- Filter menu on options [x]
+
+---
+
+**Working on tweaks: 11/02/19 2hrs**
+
+Trying to work in the final tweaks for the responsive layout and styling of the menu components.
+
+---
+
 **Working on the final stylings: 08/02/19 45m**
 
-Was not feeling in the mood this morning, so struggled to push through a basic task. The tailwind 
-syntax sometimes makes things a little confusing. Need to work on the Tailwind to CSS syntax script.
+Was not feeling in the mood this morning, so struggled to push through a basic task. The tailwind syntax sometimes makes things a little confusing. Need to work on the Tailwind to CSS syntax script.
 
 ---
 
@@ -50,11 +77,12 @@ Had to create the main styleguide html layout from scratch.
 
 Also needed to create the font size variables and classes, this needs to be optimised.
 
-Line height grid and the fonts line up nicely. Adding padding seems to work as a way to get fonts
-to sit nicely.
-----
+Line height grid and the fonts line up nicely. Adding padding seems to work as a way to get fonts to sit nicely.
+
+---
+
 **Creating Colors: 04/02/19 30m**
 
-----
-**Creating Typescale: 04/02/19 6:15 - 6:45 30m**
+---
 
+**Creating Typescale: 04/02/19 6:15 - 6:45 30m**

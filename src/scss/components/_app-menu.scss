@@ -1,23 +1,95 @@
+$brand-color__dropbox: #0061ff;
+$brand-color__facebook: #4267b2;
+$brand-color__pinterest: #e60023;
+$brand-color__git: #24292e;
+
 .app-menu {
 
   $self: &;
 
   @apply list-reset flex flex-col;
+  justify-content: center;
+  align-items: center;
 
   &__item {
+    height: 2.5rem;
+    width: 2.5rem;
 
-    & + & {
-      padding-top: 1rem;
+    &--hidden-desktop {
+      display: block;
+      @screen md {
+        display: none;
+      }
+    }
+
+    & + #{$self}__item {
+      margin-top: 2.5rem;
     }
   }
 
   &__link {
     border-radius: 100%;
     background-color: $white;
-    padding: 0.5rem;
-    font-size: 1.75rem;
-    cursor: pointer;
-    display: block;
-  }
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    transition: background-color 0.5s ease-in-out;
 
+    &--facebook {
+
+      background-color: $brand-color__facebook;
+
+      &:hover {
+        background-color: darken($brand-color__facebook, 20%);
+      }
+
+      .icon-facebook {
+        color: $white;
+      }
+    }
+
+    &--dropbox {
+
+      background-color: $brand-color__dropbox;
+
+      &:hover {
+        background-color: darken($brand-color__dropbox, 20%);
+      }
+
+      .icon-dropbox {
+        color: $white;
+      }
+    }
+
+    &--git {
+
+      background-color: $white;
+
+      &:hover {
+        background-color: darken($brand-color__git, 2%);
+      }
+
+      .icon-git {
+        color: $brand-color__git;
+      }
+    }
+
+    &--pinterest {
+
+      background-color: $brand-color__pinterest;
+
+      &:hover {
+        background-color: darken($brand-color__pinterest, 20%);
+      }
+
+      .icon-pinterest {
+        color: $white;
+      }
+
+
+    }
+  }
 }

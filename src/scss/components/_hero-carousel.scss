@@ -1,9 +1,13 @@
 .hero-carousel {
   @apply flex flex-col items-start hint-of-mauve-pansy;
   justify-content: space-around;
-  padding: 0 3.125rem;
-
   height: 280px;
+  padding: 0 1rem;
+
+  @screen md {
+    padding: 0 3.125rem;
+  }
+
   &__content {
     @apply w-full;
 
@@ -12,13 +16,35 @@
     }
   }
 
+  &__title {
+    font-size: $text-x-large;
+    line-height: $lineheight-x-large;
+    font-family: $font-light;
+  }
+
+  &__paragraph {
+    font-size: $text-medium;
+    line-height: $lineheight-medium;
+  }
+
   &__cta {
     @apply ballyhoo text-white p-4;
-
+    font-size: $text-small;
+    font-family: $lineheight-small;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   &__text-link {
     display: block;
+    font-size: $text-x-small;
+    line-height: $lineheight-x-small;
+    text-decoration: none;
+    color: $button-blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
 }

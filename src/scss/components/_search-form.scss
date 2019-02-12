@@ -1,8 +1,14 @@
 .search-form {
   display: flex;
   &__icon {
-    @apply p-2;
+    @apply block p-2;
     display: block;
+    color: $kiri-mist;
+
+    @screen sm {
+      @apply p-4;
+    }
+
   }
 
   &__input {

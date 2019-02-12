@@ -1,8 +1,14 @@
 .plugin-listing {
-  @apply texture--white-trans;
   padding: 10px;
   position: relative;
   flex: 1 0 auto;
+  display: block;
+  background-color: $texture--white-trans;
+  transition: background-color 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $texture--white-trans-tint;
+  }
 
   &:after {
     content: "";
@@ -22,12 +28,14 @@
   &__title {
     @apply text-white;
     font-size: $text-medium;
-
+    font-family: $font-primary;
+    font-weight: normal;
   }
 
   &__stars {
     @apply my-4;
     font-size: $text-small;
+    color: $orchid;
 
   }
 
