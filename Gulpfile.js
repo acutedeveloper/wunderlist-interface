@@ -10,6 +10,13 @@ function html(){
 
 }
 
+
+function images(){
+    return gulp.src(paths.images.src)
+        .pipe(gulp.dest(paths.images.dest));
+
+}
+
 function fonts(){
     return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
@@ -76,9 +83,10 @@ function watch() {
     gulp.watch(paths.styles.src, gulp.series(scss, reload));
     gulp.watch(paths.js.src, gulp.series(js, reload));
     gulp.watch(paths.html.src, gulp.series(html, reload));
+    gulp.watch(paths.images.src, gulp.series(images, reload));
     gulp.watch(paths.fonts.src, gulp.series(fonts, reload));
 
 }
 
-gulp.task('default', gulp.series(html, scss, js, fonts));
-gulp.task('serve', gulp.series(html, scss, js, fonts, browserSync, watch));
+gulp.task('default', gulp.series(html, images, scss, js, fonts));
+gulp.task('serve', gulp.series(html, images, scss, js, fonts, browserSync, watch));

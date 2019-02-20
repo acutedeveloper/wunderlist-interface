@@ -1,242 +1,280 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wunderlist Interface</title>
-    <link href="../dist/css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../dist/css/stylesheet.css">
 </head>
 <body>
-    <div class="line-height-grid"></div>
-    <div data-pg-name="wrapper" class="wrapper">
-        <div data-pg-name="sidebar" class="sidebar">
-            <img src="https://images.unsplash.com/photo-1467663802424-21ff675548c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=90&amp;h=90&amp;fit=crop" data-pg-name="sidebar__logo" class="sidebar__logo">
-            <ul data-pg-name="app-menu" class="app-menu">
-                <li data-pg-name="app-menu__item" class="app-menu__item">
-                    <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--facebook"><i class="icon-facebook"></i></a>
-                </li>
-                <li data-pg-name="app-menu__item" class="app-menu__item">
-                    <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--git"><i class="icon-git"></i></a>
-                </li>
-                <li data-pg-name="app-menu__item" class="app-menu__item">
-                    <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--pinterest"><i class="icon-pinterest"></i></a>
-                </li>
-                <li data-pg-name="app-menu__item" class="app-menu__item">
-                    <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--dropbox"><i class="icon-dropbox"></i></a>
-                </li>
-            </ul>
+<!--<div class="line-height-grid"></div>-->
+<div data-pg-name="wrapper" class="wrapper">
+    <div data-pg-name="sidebar" class="sidebar js-sidebar">
+        <img src="https://images.unsplash.com/photo-1467663802424-21ff675548c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=90&amp;h=90&amp;fit=crop"
+             data-pg-name="sidebar__logo" class="sidebar__logo">
+        <ul data-pg-name="app-menu" class="app-menu">
+            <li data-pg-name="app-menu__item" class="app-menu__item app-menu__item--hidden-desktop">
+                <button name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link js-sidebar-close"><i
+                        class="icon-cancel"></i></button>
+            </li>
+            <li data-pg-name="app-menu__item" class="app-menu__item">
+                <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--facebook"><i
+                        class="icon-facebook"></i></a>
+            </li>
+            <li data-pg-name="app-menu__item" class="app-menu__item">
+                <a name="anchor" href="#" data-pg-name="app-menu__link" class="app-menu__link app-menu__link--git"><i
+                        class="icon-git"></i></a>
+            </li>
+            <li data-pg-name="app-menu__item" class="app-menu__item">
+                <a name="anchor" href="#" data-pg-name="app-menu__link"
+                   class="app-menu__link app-menu__link--pinterest"><i class="icon-pinterest"></i></a>
+            </li>
+            <li data-pg-name="app-menu__item" class="app-menu__item">
+                <a name="anchor" href="#" data-pg-name="app-menu__link"
+                   class="app-menu__link app-menu__link--dropbox"><i class="icon-dropbox"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Main Content-->
+    <div data-pg-name="main-content" class="main-content">
+
+        <!--Header-->
+        <div data-pg-name="header" class="header">
+            <div data-pg-name="header__column" class="header__column">
+                <button name="anchor" data-pg-name="header__icon-button"
+                        class="header__icon-button header__icon-button--hide-desktop js-sidebar-open">
+                    <i class="icon-share"></i>
+                </button>
+                <form data-pg-name="search-form" class="search-form">
+                    <button type="button" data-pg-name="search-form__icon"
+                            class="search-form__icon icon-search"></button>
+                    <input data-pg-name="search-form__input" class="search-form__input">
+                </form>
+            </div>
+
+            <!--Header Column-->
+            <div data-pg-name="header__column" class="header__column">
+                <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
+                    <i class="icon-mail"></i>
+                </button>
+                <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
+                    <i class="icon-bell-alt"></i>
+                </button>
+                <!--Dropdown User Nav-->
+                <nav data-pg-name="user-nav" class="user-nav js-menu">
+                    <div class="user-nav__dropdown">
+                        <button class="user-nav__dropdown-button js-menu-toggle">
+                            <span class="user-nav__dropdown-avatar">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=100&h=100&fit=crop"
+                                     alt="">
+                            </span>
+                            <span class="user-nav__dropdown-button-text">
+                                Alrando Johm
+                            </span>
+                        </button>
+                        <div class="user-nav__dropdown-menu js-menu-list">
+                            <a class="user-nav__dropdown-link" href="#">Settings</a>
+                            <a class="user-nav__dropdown-link" href="#">Billing</a>
+                            <a class="user-nav__dropdown-link" href="#">Support</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
-        <div data-pg-name="main-content" class="main-content">
-            <div data-pg-name="header" class="header">
-                <div data-pg-name="header__column" class="header__column">
-                    <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button header__icon-button--hide-desktop">
-                        <i class="icon-share"></i>
-                    </button>
-                    <form data-pg-name="search-form" class="search-form">
-                        <button type="button" data-pg-name="search-form__icon" class="search-form__icon icon-search"></button>
-                        <input data-pg-name="search-form__input" class="search-form__input">
-                    </form>
-                </div>
-                <!--Header Column-->
-                <div data-pg-name="header__column" class="header__column">
-                    <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
-                        <i class="icon-mail"></i>
-                    </button>
-                    <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
-                        <i class="icon-bell-alt"></i>
-                    </button>
-                    <!--Dropdown User Nav-->
-                    <nav data-pg-name="user-nav" class="user-nav">
-                        <div class="user-nav__dropdown">
-                            <button class="user-nav__dropdown-button">
-                                <span class="user-nav__dropdown-avatar"> <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&fm=jpg&crop=faces&cs=srgb&w=100&h=100&fit=crop" alt=""> </span>
-                                <span class="user-nav__dropdown-button-text">
-                                Alrando Johm </span>
-                            </button>
-                            <!--<div class="user-nav__dropdown-menu hidden">-->
-                            <!--<a href="#">New Menu Item</a>-->
-                            <!--<a href="#">New Menu Item</a>-->
-                            <!--<a href="#">New Menu Item</a>-->
-                            <!--<a href="#">New Menu Item</a>-->
-                            <!--</div>-->
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div data-pg-name="hero-carousel" class="hero-carousel">
-                <div data-pg-name="hero-carousel__content" class="hero-carousel__content">
-                    <h1 data-pg-name="hero-carousel__title" class="hero-carousel__title">Wunderlist Pro</h1>
-                    <p data-pg-name="hero-carousel__paragraph" class="hero-carousel__paragraph">Upgrade your Wunderlist
+
+        <!--Hero Carousel-->
+        <div data-pg-name="hero-carousel" class="hero-carousel">
+            <div data-pg-name="hero-carousel__content" class="hero-carousel__content">
+                <h1 data-pg-name="hero-carousel__title" class="hero-carousel__title">Wunderlist Pro</h1>
+                <p data-pg-name="hero-carousel__paragraph" class="hero-carousel__paragraph">Upgrade your Wunderlist
                     experience and start accomplishing even more in the home and in the office.</p>
-                </div>
-                <div data-pg-name="hero-carousel__content" class="hero-carousel__content">
-                    <button data-pg-name="hero-carousel__cta" class="hero-carousel__cta">Upgrade to Wonderlist Pro</button>
-                    <a href="#" name="anchor" data-pg-name="hero-carousel__text-link" class="hero-carousel__text-link">In a team? Go
-                    for Wonderlist Pro</a>
-                </div>
             </div>
-            <div data-pg-name="plugins-store" class="plugins-store">
-                <div data-pg-name="plugins-store__options-wrap" class="plugins-store__options-wrap">
-                    <div data-pg-name="plugins-store__select-menu" class="plugins-store__select-menu">
-                        <select>
-                            <option>Collections</option>
-                        </select>
-                    </div>
-                    <a name="anchor" data-pg-name="plugins-store__filter-menu-toggle" class="plugins-store__filter-menu-toggle"><i class="icon-sliders"></i></a>
-                    <ul data-pg-name="plugins-store__filter-menu" class="plugins-store__filter-menu">
-                        <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
-                            <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link" class="plugins-store__filter-menu-link">All</a>
-                        </li>
-                        <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
-                            <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link" class="plugins-store__filter-menu-link">New</a>
-                        </li>
-                        <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
-                            <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link" class="plugins-store__filter-menu-link">Featured</a>
-                        </li>
-                        <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
-                            <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link" class="plugins-store__filter-menu-link">Popular</a>
-                        </li>
-                    </ul>
+
+            <div data-pg-name="hero-carousel__content" class="hero-carousel__content">
+                <button data-pg-name="hero-carousel__cta" class="hero-carousel__cta">Upgrade to Wonderlist Pro</button>
+                <a href="#" name="anchor" data-pg-name="hero-carousel__text-link" class="hero-carousel__text-link">In a
+                    team? Go
+                    for Wonderlist Pro</a>
+            </div>
+        </div>
+
+        <!--Plugin Store-->
+        <div data-pg-name="plugins-store" class="plugins-store">
+            <!--Plugin Store options-->
+            <div data-pg-name="plugins-store__options-wrap" class="plugins-store__options-wrap js-filterMenu">
+                <div data-pg-name="plugins-store__select-menu" class="plugins-store__select-menu">
+                    <select>
+                        <option>Collections</option>
+                    </select>
                 </div>
-                <div data-pg-name="plugins-store__grid" class="plugins-store__grid">
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+
+                <!--Filter Toggle-->
+                <a name="anchor" data-pg-name="plugins-store__filter-menu-toggle"
+                   class="plugins-store__filter-menu-toggle js-filterMenu-toggle"><i class="icon-sliders"></i></a>
+
+                <!--Filter Menu-->
+                <ul data-pg-name="plugins-store__filter-menu" class="plugins-store__filter-menu js-filterMenu-list">
+                    <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
+                        <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link"
+                           class="plugins-store__filter-menu-link">All</a>
+                    </li>
+                    <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
+                        <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link"
+                           class="plugins-store__filter-menu-link">New</a>
+                    </li>
+                    <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
+                        <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link"
+                           class="plugins-store__filter-menu-link">Featured</a>
+                    </li>
+                    <li data-pg-name="plugins-store__filter-menu-item" class="plugins-store__filter-menu-item">
+                        <a href="#" name="anchor" data-pg-name="plugins-store__filter-menu-link"
+                           class="plugins-store__filter-menu-link">Popular</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--Plugin Store Grid-->
+            <div data-pg-name="plugins-store__grid" class="plugins-store__grid">
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
-                    <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
-                        <div data-pg-name="plugin-listing" class="plugin-listing">
-                            <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
-                                <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
-                                <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                    <i class="icon-star text-white"></i>
-                                </div>
-                                <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
-                                    <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
-                                </div>
+                    </a>
+                </div>
+                <div data-pg-name="plugins-store__grid-item" class="plugins-store__grid-item">
+                    <a data-pg-name="plugin-listing" class="plugin-listing">
+                        <div data-pg-name="plugin-listing__content" class="plugin-listing__content">
+                            <h2 data-pg-name="plugin-listing__title" class="plugin-listing__title">Heading 2</h2>
+                            <div data-pg-name="plugin-listing__stars" class="plugin-listing__stars">
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                                <i class="icon-star text-white"></i>
+                            </div>
+                            <div data-pg-name="plugin-listing__logo" class="plugin-listing__logo">
+                                <img src="https://images.unsplash.com/photo-1517305268957-8d20be2c9b62?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjIwOTIyfQq=85&amp;fm=jpg&amp;crop=faces&amp;cs=srgb&amp;w=75&amp;h=50&amp;fit=crop">
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <script type="application/javascript" src="js/app.js"></script>
+</div>
+<script type="application/javascript" src="js/all.js"></script>
+
 </body>

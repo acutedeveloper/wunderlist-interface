@@ -23,11 +23,18 @@ On mobile search input is hidden but revealed with icon of magnifying glass. On 
 
 ## Progress Log
 
+**Working on Finishing Touches: 20/02/19 x2 50mins**
+
+Added the logos. Image searches take their toll :/
+- Add in the background image [ ]
+
+---
+
 **Working on tweaks: 12/02/19 2hr**
 
 Worked on adding the JS to hidden elements. Added the drop down menu and filter menu.
 
-- Get Logos for the layout [ ]
+- Get Logos for the layout [x]
 
 ---
 

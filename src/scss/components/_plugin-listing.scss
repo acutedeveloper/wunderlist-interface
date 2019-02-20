@@ -32,9 +32,13 @@
     font-weight: normal;
   }
 
+  &__logo {
+    max-width: 100px;
+  }
+
   &__stars {
     @apply my-4;
-    font-size: $text-small;
+    font-size: $text-x-small;
     color: $orchid;
 
   }

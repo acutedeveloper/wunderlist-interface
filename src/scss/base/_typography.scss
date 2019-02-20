@@ -59,8 +59,11 @@ $font-light: lato-light, lato, Helvetica, Arial, sans-serif;
 *------------------------------------*/
 
 
-$text-x-large: px-to-rem(40, $font-base-size);
-$lineheight-x-large: 1.2;
+$text-xx-large: px-to-rem(40, $font-base-size);
+$lineheight-xx-large: 1.2;
+
+$text-x-large: px-to-rem(24, $font-base-size);
+$lineheight-x-large: 1.333;
 
 $text-large: px-to-rem(16, $font-base-size);
 $lineheight-large: 1.5;
@@ -97,8 +100,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, .text-size-x-large {
-  font-size: $text-x-large;
-  line-height: $lineheight-x-large;
+  font-size: $text-xx-large;
+  line-height: $lineheight-xx-large;
 }
 
 h2, .text-size-large {

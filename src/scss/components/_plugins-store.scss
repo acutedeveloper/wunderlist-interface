@@ -4,7 +4,7 @@
   background-image: $texture--blue-gradient;
 
   @screen md {
-    padding: 1rem 3.125rem;
+    padding: 3.125rem;
   }
 
   &__options-wrap {
@@ -12,7 +12,7 @@
   }
 
   &__select-menu {
-    @apply m-4 p-4 texture--white-trans;
+    @apply m-4 p-2 texture--white-trans;
     color: $white;
     position: relative;
     line-height: 1.5;

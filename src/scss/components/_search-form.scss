@@ -4,9 +4,12 @@
     @apply block p-2;
     display: block;
     color: $kiri-mist;
+    font-size: $text-x-large;
+    line-height: $lineheight-x-large;
+
 
     @screen sm {
-      @apply p-4;
+      @apply p-3;
     }
 
   }
