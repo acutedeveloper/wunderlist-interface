@@ -23,10 +23,17 @@ On mobile search input is hidden but revealed with icon of magnifying glass. On 
 
 ## Progress Log
 
+**Working on Finishing Touches: 21/02/19 50mins**
+
+Added the background image. Turned out to be a little tricky. Needed height and width added to the image
+for the object fit to work.
+
+---
+
 **Working on Finishing Touches: 20/02/19 x2 50mins**
 
 Added the logos. Image searches take their toll :/
-- Add in the background image [ ]
+- Add in the background image [x]
 
 ---
 

@@ -3,15 +3,43 @@
   justify-content: space-around;
   height: 280px;
   padding: 0 1rem;
+  position: relative;
 
   @screen md {
     padding: 0 3.125rem;
   }
 
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F1F1F1; // Specific to image used
+
+    img {
+      object-fit: cover;
+      object-position: right;
+      height: 100%;
+      width: 100%;
+      display: none;
+
+      @screen sm {
+        display: block;
+      }
+    }
+  }
+
   &__content {
     @apply w-full;
+    text-align: center;
+    z-index: 10;
 
-    @screen md {
+    @screen sm {
+      text-align: left;
+    }
+
+    @screen sm {
       @apply w-2/3;
     }
   }
