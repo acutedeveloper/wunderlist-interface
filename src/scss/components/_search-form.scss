@@ -1,5 +1,44 @@
 .search-form {
+
+  $self: &;
+
   display: flex;
+  position: static;
+
+  &__icon-close {
+    display: none;
+    background-color: white;
+    color: $kiri-mist;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 38px;
+    width: 3rem;
+    line-height: 28px;
+    text-align: center;
+    z-index: 10;
+    display: none;
+    margin-top: .5rem;
+    margin-right: .5rem;
+    font-size: $text-large;
+
+    &:after {
+      content: "\e804";
+      font-family: fontello;
+    }
+  }
+
+  &.js-show {
+
+    #{$self}__icon-close {
+      display: block;
+    }
+
+    #{$self}__input {
+      @apply inline-block;
+    }
+  }
+
   &__icon {
     @apply block p-2;
     display: block;
@@ -15,13 +54,25 @@
   }
 
   &__input {
+    left: 0.5rem;
+    width: calc(100% - 4rem);
+    position: absolute;
+    z-index: 100;
+    padding: .5rem;
+    margin-top: .5rem;
+    display: none;
     @apply hidden;
+    border: 2px solid $kiri-mist;
+
     @screen md {
       @apply inline-block;
+      position: relative;
+      border: none;
       border-left: 2px solid $kiri-mist;
       margin: 0.5rem 0;
       height: 2.5rem;
     }
+
   }
 
 }

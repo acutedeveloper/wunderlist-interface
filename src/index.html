@@ -45,20 +45,48 @@
                         class="header__icon-button header__icon-button--hide-desktop js-sidebar-open">
                     <i class="icon-share"></i>
                 </button>
-                <form data-pg-name="search-form" class="search-form">
+                <form data-pg-name="search-form" class="search-form js-search-field">
                     <button type="button" data-pg-name="search-form__icon"
-                            class="search-form__icon icon-search"></button>
+                            class="search-form__icon icon-search js-search-toggle"></button>
                     <input data-pg-name="search-form__input" class="search-form__input">
+                    <button type="button" class="search-form__icon-close js-search-close"></button>
                 </form>
+
             </div>
 
             <!--Header Column-->
             <div data-pg-name="header__column" class="header__column">
                 <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
                     <i class="icon-mail"></i>
+                    <!--SVG Notifcation Icon-->
+                    <svg class="header__icon-notification" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop" transform="translate(-379.000000, -960.000000)">
+                                <g id="notification-digit" transform="translate(379.000000, 960.000000)">
+                                    <circle id="Oval" fill="#2897F5" cx="9" cy="9" r="9"></circle>
+                                    <text id="7" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+                                        <tspan x="9" y="13">7</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
                 </button>
                 <button name="anchor" data-pg-name="header__icon-button" class="header__icon-button">
                     <i class="icon-bell-alt"></i>
+                    <!--SVG Notifcation Icon-->
+                    <svg class="header__icon-notification" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Desktop" transform="translate(-379.000000, -960.000000)">
+                                <g id="notification-digit" transform="translate(379.000000, 960.000000)">
+                                    <circle id="Oval" fill="#2897F5" cx="9" cy="9" r="9"></circle>
+                                    <text id="7" font-family="Lato-Bold, Lato" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+                                        <tspan x="9" y="13">5</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
                 </button>
                 <!--Dropdown User Nav-->
                 <nav data-pg-name="user-nav" class="user-nav js-menu">
@@ -279,5 +307,59 @@
     </div>
 </div>
 <script type="application/javascript" src="js/all.js"></script>
+<script>
+    (function(){
 
+        class responsiveSearchField{
+
+            constructor(searchObject) {
+
+                this.searchToggle = document.querySelector(`.${searchObject.searchToggleClass}`);
+                this.searchField = document.querySelector(`.${searchObject.searchFieldClass}`);
+                this.searchCloseButton = document.querySelector(`.${searchObject.searchCloseClass}`);
+
+                if(this.searchToggle !== null && this.searchField !== null){
+                    this.setEvents();
+                } else {
+                    console.error("You have not added the correct classes to elements");
+                }
+
+            }
+
+            setEvents() {
+
+                this.searchToggle.addEventListener('click', function(e){
+                    e.preventDefault();
+                    this.toggleSearchField();
+                }.bind(this));
+
+                this.searchCloseButton.addEventListener('click', function(){
+                    this.hideSearchField();
+                }.bind(this));
+
+            }
+
+            toggleSearchField() {
+
+                if (document.body.clientWidth < 768) {
+                    this.searchField.classList.toggle('js-show');
+                }
+
+            }
+
+            hideSearchField() {
+                if (document.body.clientWidth < 768 && this.searchField.classList.contains("js-show")) {
+                    this.searchField.classList.remove('js-show');
+                }
+            }
+        }
+
+        const headerSearch = new responsiveSearchField({
+            searchToggleClass: "js-search-toggle",
+            searchFieldClass: "js-search-field",
+            searchCloseClass: "js-search-close"
+        })
+
+    })();
+</script>
 </body>

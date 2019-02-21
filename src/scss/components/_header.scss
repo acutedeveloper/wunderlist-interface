@@ -14,6 +14,7 @@
     @apply p-2;
     color: $kiri-mist;
     transition: background-color 0.5s ease-in-out;
+    position: relative;
 
     &:hover {
       color: $white;
@@ -29,6 +30,12 @@
         display: none;
       }
     }
+  }
+
+  &__icon-notification {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
   }
 
   &__sidebar-toggle {

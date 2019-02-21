@@ -23,6 +23,15 @@ On mobile search input is hidden but revealed with icon of magnifying glass. On 
 
 ## Progress Log
 
+**Working on Finishing Touches: 21/02/19 1h 15mins**
+
+Added in the mobile functionality for the header search field. Needed to add some absolute positioning to get things right.
+Also needed to think about how it would be revealed and overlap the components in the header already.
+Made use of position static.
+
+---
+
+
 **Working on Finishing Touches: 21/02/19 50mins**
 
 Added the background image. Turned out to be a little tricky. Needed height and width added to the image
@@ -50,8 +59,8 @@ Worked on adding the JS to hidden elements. Added the drop down menu and filter 
 Working in the last tweaks that are needed to complete this project. The last things needed are:
 
 - Javascript Carousel [ ]
-- Javascript header search [ ]
-- Header button notification icons [ ]
+- Javascript header search [x]
+- Header button notification icons [x]
 - Javascript for sidebar [x]
 - Heading user drop menu [x]
 - Filter menu on options [x]
