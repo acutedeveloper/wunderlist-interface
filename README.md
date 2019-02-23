@@ -31,7 +31,6 @@ Made use of position static.
 
 ---
 
-
 **Working on Finishing Touches: 21/02/19 50mins**
 
 Added the background image. Turned out to be a little tricky. Needed height and width added to the image
